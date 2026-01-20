@@ -10,7 +10,7 @@ Bu projenin amacı, bir akıllı eve ait zaman ve hava durumu verilerini kullana
 # Kullanılan değişkenler
 Modelde 3 ana değişken gubu kullandık:
 
-## 1-Zaman tabalı değişkenler
+## 1-Zaman tabanlı değişkenler
 Zaman bilgisi, ev içi enerji tüketiminin günlük ve haftalık alışkanlıklara bağlı olarak değişmesi nedeniyle modelimizde çok önemlidir. Bu nedenle zaman değişkeni (time) kullanılarak aşağıdaki türetilmiş değişkenler elde edilmiştir:
 •	hour: saat
 •	dayofweek: gün
@@ -48,6 +48,9 @@ Kısaca pivot, çok fazla bilgiyi tek bir tablo halinde özetleme yöntemidir. S
 
 Enerji tüketimi gibi insan davranışına bağlı verilerde, anlık değişimler sıkça görülür. Pivot tablolar, bu anlık değişimleri azaltarak verinin genel yapısını ortaya çıkarmaya yardımcı olur.
 Yani pivot sayesinde tek tek ölçümlere bakmak yerine, verinin ortalama davranışı anlaşılır hale gelir.
+
+# Veri seti ve ön hazırlık 
+
 
 
 
