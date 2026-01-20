@@ -50,8 +50,11 @@ Enerji tüketimi gibi insan davranışına bağlı verilerde, anlık değişimle
 Yani pivot sayesinde tek tek ölçümlere bakmak yerine, verinin ortalama davranışı anlaşılır hale gelir.
 
 # Veri seti ve ön hazırlık 
-
-
+- Projede Smart Home Dataset.csv veri seti kullandık.
+- time sutununda sayısala çevrilmeyen satırları atıyoruz
+- cloudCover(bulut oranı) satırını sayısal verilere çevirdik
+- time satırı net bi bilgi olduğundan dolayı bunu hour,dayofwwek ve month olarak parçalıyoruz.
+(ss1.png)
 
 
 
