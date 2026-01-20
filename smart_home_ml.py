@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
+import matplotlib.pyplot as plt
 
 #dosyayı okuyoruz
 df = pd.read_csv("Smart Home Dataset.csv")
@@ -155,4 +156,20 @@ print("MAE", mean_absolute_error(y_test,rf_pred))
 print("\nKNN")
 print("R2= ", r2_score(y_test, knn_pred))
 print("MAE", mean_absolute_error(y_test,knn_pred))
+
+#gerçek ve tahmin grafiği
+plt.figure(figsize=(6,6))
+plt.scatter(y_test, rf_pred, alpha=0.5)
+plt.plot(
+    [y_test.min(), y_test.max()],
+    [y_test.min(), y_test.max()],
+    'r--'
+)
+
+plt.xlabel("Gerçek Tüketim (kW)")
+plt.ylabel("Tahmin Edilen Tüketim (kW)")
+plt.title("Gerçek vs Tahmin (Random Forest)")
+plt.tight_layout()
+plt.show()
+
 
