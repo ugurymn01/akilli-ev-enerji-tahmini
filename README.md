@@ -95,11 +95,11 @@ Yani model çoğu zaman 4–5 ampul kadar yanılıyor bu ev enerjisi için çok 
 <table>
   <tr>
     <td align="center">
-      <img src="resimler/sertifika.png" width="400"/>
+      <img src="resimler/sertifika.png" width="600"/>
       <br/>
     </td>
     <td align="center">
-      <img src="resimler/sertifika2.png" width="400"/>
+      <img src="resimler/sertifika2.png" width="600"/>
       <br/>
     </td>
   </tr>
