@@ -91,15 +91,15 @@ Yani model çoğu zaman 4–5 ampul kadar yanılıyor bu ev enerjisi için çok 
 ## Gerçek vs Tahmin Grafiği (Random Forest)
 ![grafik.png](resimler/grafik.png)
 
-# sertifikalarım
+# SERTİFİKALARIM
 <table>
   <tr>
     <td align="center">
-      <img src="resimler/sertifika.png" width="600"/>
+      <img src="resimler/sertifika.png" width="800"/>
       <br/>
     </td>
     <td align="center">
-      <img src="resimler/sertifika2.png" width="600"/>
+      <img src="resimler/sertifika2.png" width="800"/>
       <br/>
     </td>
   </tr>
