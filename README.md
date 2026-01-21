@@ -54,7 +54,39 @@ Yani pivot sayesinde tek tek ölçümlere bakmak yerine, verinin ortalama davran
 - time sutununda sayısala çevrilmeyen satırları atıyoruz
 - cloudCover(bulut oranı) satırını sayısal verilere çevirdik
 - time satırı net bi bilgi olduğundan dolayı bunu hour,dayofwwek ve month olarak parçalıyoruz.
-(ss1.png)
+[işleme aşaması](ss1.png)
+
+## encoder aşaması
+- Hava durumunu sayısallaştırıyoruz çünkü tüketim artıyor azalıyor tespiti yapmak için sayısal değerlere ihtiyacımız oldu.
+[encoder aşaması](ss2.png)
+
+## Pivot tablosu
+- Pivot uygularken o satırın saati hava durumu ve normal tüketimini alıp yeni bir satıra yazıyoruz bu şekilde yan yana gözüken değerlerde sapma oranını bulmamız kolaylaşıyor.
+[pivot1](ss3.png)
+- 2.pivot tablomuzda ise saat ve sıcaklık arasındaki ilişkiyi ele aldık. Öncelikle sıcaklık değerlerini verdikten sonra sıcaklık değerine göre değerlendirme içeren bir atama yaptık
+[pivot2](ss4.png)
+
+## features ve test kısmı
+- features kısmına işlediğimiz, oluşturduğumuz ve tablodaki bazı değerlerin bilgisini veriyoruz. Yani sadece bu kolonlara bakma izni veriyorum diyerek veri sızıntısını önlüyoruz.
+- X değerine ise features girdisinin verilerini veriyoruz y ise tahmin etmesini istediklerimizdir.
+- model ezber mi yapıyor yoksa öğreniyor mu yani test verisinde değerlendirme yapıyoruz kontrolü için ise resmimizin en altındaki kodları yazıyoruz
+[features ve test kısmı](ss5.png)
+
+## Model eğitimi ve sonuçlar 
+- house overall[kW] ,sürekli ve sayısal bir değer olduğu için problem bir regresyon problemi olarak ele aldık.
+- Random Forest modeli, birden fazla karar ağacının çıktısını birleştirerek tahmin yapan güçlü bir regresyon yöntemidir. Bu model doğrusal olmayan ilişkileri yakaaybilen ve daha kararlı sonuçlar elde edebilmesinden dolayı seçilmiştir. Enerji tüketimi gibi birçok faktöre bağlı ve düzensiz yapıya sahip veriler için uygun bir modeldir.
+- KNN modeli, bir veri noktasına en yakın komşuların ortalamasını alarak tahmin yapar. Ayrıca mesafe tabanlı bir yöntem olduğu için verilerin ölçeklendirilmesi gerektiğinden, veri ön işleme sürecinin etkisini gözlemlemek açısından da faydalı olmuştur.
+- Scaling ,arklı büyüklüklerdeki sayısal değerler, ölçekleme yapılmadan kullanıldığında bazı modeller için yanıltıcı olabilir. birbirinde bağımsız değerler (örneğin saat=20, nem=0.45 gibi) birbirine üstünlük kurmasın diye kullanılmıştır.
+[model eğitimi](ss6.png)
+
+- Sonuçlarımıza baktığımızda ise Random Forest modeli yaklaşık 0.54 R² değeri elde etmiş ve 0.29 kW MAE ile KNN modeline kıyasla daha başarılı sonuçlar üretmiştir.
+- KNN modeli ise yaklaşık 0.46 R² ve 0.32 kW MAE değerleri ile daha sınırlı bir performans sergilemiştir.
+- Ortalama hata, yaklaşık 300 Watt, bunu gerçek hayatta düşünürsek
+bir ampul ≈ 60W
+300W ≈ 5 ampul
+Yani model çoğu zaman 4–5 ampul kadar yanılıyor bu ev enerjisi için çok kabullenilebilir bir hata
+- diğr bir yönden ise direk cihaz bazlı veriler ile direk sayısal tamin yaptığımızdan (regresyon kullanma sebebimiz) sonuçlar bu şekildedir.
+
 
 
 
