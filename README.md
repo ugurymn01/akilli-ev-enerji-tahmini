@@ -1,4 +1,4 @@
-# akilli-ev-enerji-tahmini
+# Akıllı Ev Enerji Tahmini
 Bu projenin amacı, bir akıllı eve ait zaman ve hava durumu verilerini kullanarak evin anlık toplam elektrik tüketimini (kW) tahmin etmektir. Projede, tüketimi sınıflandırmak yerine gerçek tüketim değerini tahmin eden regresyon tabanlı bir yaklaşım benimsenmiştir.
 
 # Verinin içeriği
@@ -86,10 +86,10 @@ bir ampul ≈ 60W
 300W ≈ 5 ampul
 Yani model çoğu zaman 4–5 ampul kadar yanılıyor bu ev enerjisi için çok kabullenilebilir bir hata
 - diğr bir yönden ise direk cihaz bazlı veriler ile direk sayısal tamin yaptığımızdan (regresyon kullanma sebebimiz) sonuçlar bu şekildedir.
-![sonuçlar.png](sonuçlar.png)
+![sonuçlar.png](resimler/sonuçlar.png)
 
 ## Gerçek vs Tahmin Grafiği (Random Forest)
-![grafik.png](grafik.png)
+![grafik.png](resimler/grafik.png)
 
 # sertifikalarım
 <table>
