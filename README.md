@@ -86,7 +86,26 @@ bir ampul ≈ 60W
 300W ≈ 5 ampul
 Yani model çoğu zaman 4–5 ampul kadar yanılıyor bu ev enerjisi için çok kabullenilebilir bir hata
 - diğr bir yönden ise direk cihaz bazlı veriler ile direk sayısal tamin yaptığımızdan (regresyon kullanma sebebimiz) sonuçlar bu şekildedir.
+![sonuçlar](sonuçlar.png)
 
+## Gerçek vs Tahmin Grafiği (Random Forest)
+![grafik](grafik.png)
+
+# sertifikalarım
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/sertifika.png" width="400"/>
+      <br/>
+      <b>Random Forest</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/sertifika2.png" width="400"/>
+      <br/>
+      <b>KNN</b>
+    </td>
+  </tr>
+</table>
 
 
 
